@@ -9,3 +9,9 @@
  - 学会了使用 **print** 输出
  - 使用 **input** 获取用户输入
  - 理解了字符串和整数的区别
+
+## Day 3
+
+- 学习了 int / float / str / bool
+- 学会 list 和 dict 的基本使用
+- 掌握 if / elif / else 判断逻辑
