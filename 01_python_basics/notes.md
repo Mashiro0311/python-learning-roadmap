@@ -15,3 +15,10 @@
 - 学习了 int / float / str / bool
 - 学会 list 和 dict 的基本使用
 - 掌握 if / elif / else 判断逻辑
+
+## Day 4
+
+- 掌握 for / while 循环
+- 理解 break / continue
+- 学会定义和调用函数
+- 完成第一个“完整逻辑”的小项目
