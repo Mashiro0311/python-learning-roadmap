@@ -1,16 +1,22 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
-# 1.读取数据
-df = pd.read_csv('quotes.csv')  # 读取CSV文件
-print(df.head())  # 读取钱5行数据
-print("总数据量：", len(df))
 
-# 2.基础统计
-author_count = df['author'].value_counts()  # 这是最经典的数据分析操作之一
-print("名言数量最多的作者（前 5）：")
-print(author_count.head())
+def analysis(filename):
+    df = pd.read_csv(filename)
+    author_count = df['author'].value_counts().head(10)
 
-# 3. 简单“结论型输出”
-top_author = author_count.idxmax()
-top_count = author_count.max()
-print(f"名言最多的作者是：{top_author}，共有 {top_count} 条名言")
+    top_author = author_count.idxmax()
+    top_count = author_count.max()
+
+    print(f"名言最多的作者是：{top_author}（{top_count} 条）")
+    author_count.plot(kind='bar')
+    plt.title("Top 10 Authors by Number of Quotes")
+    plt.xlabel("Author")
+    plt.ylabel("Number of Quotes")
+    plt.tight_layout()
+    plt.show()
+
+
+if __name__ == '__main__':
+    analysis('quotes_crawl.csv')
