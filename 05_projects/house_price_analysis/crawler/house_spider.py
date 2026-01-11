@@ -14,6 +14,7 @@ HEADER = {
 def safe_text(tag):
     return tag.get_text(strip=True) if tag else ""
 
+
 def crawler_house(page):
     url = BASE_URL.format(page)
     response = requests.get(url, headers=HEADER, timeout=10)
